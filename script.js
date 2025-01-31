@@ -104,3 +104,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const resumeLink = document.getElementById('resume-link');
+    const resumeOverlay = document.getElementById('resume-overlay');
+    const closeResume = document.getElementById('close-resume');
+
+    // Open the overlay when the link is clicked
+    resumeLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        resumeOverlay.style.display = 'block';
+    });
+
+    // Close the overlay when the close button is clicked
+    closeResume.addEventListener('click', () => {
+        resumeOverlay.style.display = 'none';
+    });
+
+    // Close the overlay when clicking outside the content area
+    window.addEventListener('click', (event) => {
+        if (event.target === resumeOverlay) {
+            resumeOverlay.style.display = 'none';
+        }
+    });
+});
+

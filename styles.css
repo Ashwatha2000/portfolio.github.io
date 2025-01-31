@@ -361,3 +361,51 @@ footer a:focus {
         font-size: 1.2rem;
     }
 }
+   /* Overlay Container */
+    .resume-overlay {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    /* Content Inside the Overlay */
+    .resume-content {
+        position: relative;
+        margin: auto;
+        width: 90%;
+        height: 90%;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Close Button */
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .close-button:hover {
+        color: #ff6f61;
+    }
+
+    /* Embed PDF Viewer */
+    .resume-viewer {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    
